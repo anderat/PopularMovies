@@ -22,7 +22,7 @@ public class Utility {
 
   private static final String LOG_TAG = Utility.class.getSimpleName();
 
-  private static final String API_KEY = "6abeb5d7cae3b5a7d9b2a9d91ef03a33";
+  private static final String API_KEY = "";
   public static final String IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w342/";
   public static final String BASE_URL = "https://api.themoviedb.org/3";
   private static final String API_KEY_PARAM = "api_key";
