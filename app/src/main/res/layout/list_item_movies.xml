@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_gravity="center_vertical|center_horizontal">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/list_item_movies_poster"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:minWidth="@dimen/grid_column_width"
-        android:contentDescription="@string/poster"/>
-
-</FrameLayout>
+<ImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_movies_poster"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/poster"
+    android:scaleType="centerCrop"
+    android:adjustViewBounds="true"/>

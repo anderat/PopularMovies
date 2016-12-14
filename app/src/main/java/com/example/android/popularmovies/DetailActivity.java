@@ -29,8 +29,8 @@ public class DetailActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_detail);
     Intent intent = getIntent();
-    if (intent != null && intent.hasExtra("movie") && intent.getParcelableExtra("movie") instanceof Movie) {
-      movie = (Movie)intent.getParcelableExtra("movie");
+    if (intent != null && intent.hasExtra(Movie.PARCELABLE_KEY) && intent.getParcelableExtra(Movie.PARCELABLE_KEY) instanceof Movie) {
+      movie = (Movie)intent.getParcelableExtra(Movie.PARCELABLE_KEY);
     }
     if (movie != null) {
       toolbar = (Toolbar) findViewById(R.id.toolbar);

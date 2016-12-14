@@ -4,8 +4,8 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="grid_margin">0dp</dimen>
     <dimen name="grid_column_width">150dp</dimen>
-    <dimen name="grid_horizontal_space">8dp</dimen>
-    <dimen name="grid_vertical_space">8dp</dimen>
+    <dimen name="grid_horizontal_space">0dp</dimen>
+    <dimen name="grid_vertical_space">0dp</dimen>
 
     <!-- Style -->
     <dimen name="font_size_small">10sp</dimen>

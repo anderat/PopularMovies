@@ -7,6 +7,8 @@ import java.util.Date;
 
 public class Movie implements Parcelable {
 
+  public static final String PARCELABLE_KEY = "movie";
+
   private Boolean adult;
   private String posterPath;
   private String overview;

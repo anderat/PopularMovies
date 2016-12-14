@@ -22,12 +22,11 @@ public class Utility {
 
   private static final String LOG_TAG = Utility.class.getSimpleName();
 
-  private static final String API_KEY = "";
+  private static final String API_KEY = "6abeb5d7cae3b5a7d9b2a9d91ef03a33";
   public static final String IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w342/";
   public static final String BASE_URL = "https://api.themoviedb.org/3";
   private static final String API_KEY_PARAM = "api_key";
-  private static final String SORTBY_PARAM = "sort_by";
-  private static final String DISCOVER_MOVIE_URL = BASE_URL + "/discover/movie?";
+  private static final String DISCOVER_MOVIE_URL = BASE_URL + "/movie";
 
   public static ArrayList<Movie> fetchMovieList(String sortBy) {
     // Will contain the raw JSON response as a string.
@@ -36,9 +35,12 @@ public class Utility {
     HttpURLConnection urlConnection = null;
     BufferedReader reader = null;
 
+    if (sortBy == null || sortBy.isEmpty()) {
+      sortBy = "popular";
+    }
+    String fullUrl = DISCOVER_MOVIE_URL + "/" + sortBy + "?";
     try {
-      Uri builtUri = Uri.parse(DISCOVER_MOVIE_URL).buildUpon()
-              .appendQueryParameter(SORTBY_PARAM, sortBy)
+      Uri builtUri = Uri.parse(fullUrl).buildUpon()
               .appendQueryParameter(API_KEY_PARAM, API_KEY)
               .build();
 
